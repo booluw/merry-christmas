@@ -1,0 +1,331 @@
+@-webkit-keyframes even {
+  20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes even {
+  20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes odd {
+  20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes odd {
+  20% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes scale-odd {
+  20% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  40% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes scale-odd {
+  20% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  40% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../scss/Poppins-Regular.ttf");
+}
+
+*::after,
+*::before,
+* {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  /* We want the text to stay center and middle, yeah?*/
+  background-color: #bed5ff;
+}
+
+.heading {
+  font-size: 3rem;
+}
+
+.container {
+  text-align: center;
+}
+
+.text-label {
+  -webkit-transition: -webkit-transform .5rem ease;
+  transition: -webkit-transform .5rem ease;
+  transition: transform .5rem ease;
+  transition: transform .5rem ease, -webkit-transform .5rem ease;
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: .1rem .2rem .1rem crimson;
+  color: #00994d;
+  text-align: center;
+  padding: 3rem;
+}
+
+.text-label div {
+  display: inline-block;
+}
+
+.text-label span {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
+}
+
+.text-label span:hover {
+  -webkit-transform: translateY(-0.6rem);
+          transform: translateY(-0.6rem);
+}
+
+.text-label span:nth-last-of-type(odd) {
+  -webkit-animation-name: odd;
+          animation-name: odd;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.text-label span:nth-last-of-type(odd):hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.text-label span:nth-last-of-type(even) {
+  -webkit-animation-name: even;
+          animation-name: even;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.text-label span:nth-last-of-type(even):hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.text-label b {
+  display: inline-block;
+  font-weight: bolder;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-animation-name: scale-odd;
+          animation-name: scale-odd;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.text-label b:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.text-label small {
+  font-size: 2rem;
+  text-shadow: .2rem .2rem .1rem crimson;
+}
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5rem auto 0;
+  padding: 1.5rem 5rem;
+  background-color: transparent;
+  border: 0.2rem solid #00994d;
+  border-radius: .5rem;
+  color: #00994d;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #00994d;
+  color: #BED5FF;
+}
+
+.image-label {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-transform: translateX(-10000rem);
+          transform: translateX(-10000rem);
+  padding: 5rem 2rem;
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ .btn {
+  display: none;
+}
+
+#checkbox:checked ~ .text-label {
+  -webkit-transform: translateX(-10000rem);
+          transform: translateX(-10000rem);
+}
+
+#checkbox:checked ~ .image-label {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.photo-gallery {
+  margin: 5rem 0 0;
+}
+
+.photo {
+  background-color: #ccc;
+  margin: 1rem 0;
+  overflow: hidden;
+  border-radius: .5rem;
+  -webkit-box-shadow: .3rem .3rem .5rem #999;
+          box-shadow: .3rem .3rem .5rem #999;
+  text-align: left;
+}
+
+.photo__img {
+  padding: 7rem 0;
+  width: 100%;
+}
+
+.photo__heading {
+  padding: 1rem 2rem 0;
+}
+
+.photo__text {
+  padding: 0 2rem 2rem;
+}
+
+@media (min-width: 1000px) {
+  .text-label {
+    font-size: 7rem;
+    text-shadow: .1rem .5rem .1rem crimson;
+    padding: 0;
+  }
+  .text-label small {
+    font-size: 3rem;
+  }
+  .photo-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .photo {
+    width: calc(calc(100% / 4) - 1rem);
+    margin: 0 .5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
