@@ -1,0 +1,29 @@
+@keyframes even {
+    20% {
+        transform: translateY(0);
+    } 40% {
+        transform: translateY(-1rem);
+    } 100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes odd {
+    20% {
+        transform: translateY(0);
+    } 40% {
+        transform: translateY(-1rem);
+    } 100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scale-odd {
+    20% {
+        transform: scale(.9);
+    } 40% {
+        transform: scale(1.1);
+    } 100% {
+        transform: scale(.9);
+    }
+}
